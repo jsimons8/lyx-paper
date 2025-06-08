@@ -50,7 +50,8 @@ The template is perfectly compatible with [arXiv](https://arxiv.org/). After bei
 
 1. Export the LyX file as `pdflatex` by clicking File > Export > LaTeX (pdflatex) and move the exported `paper.tex` into the `arxiv` folder.
 
-2. Adjust the preamble of `paper.tex`. On line 3, replace `\bibliographystyle{bibliography}` by `\pdfoutput=1`. The `\bibliographystyle{bibliography}` command is not needed because arXiv produces the bibliography from the `paper.bbl` file. The `\pdfoutput=1` is required because the paper is compiled with pdfTeX.
+2. Adjust the preamble of `paper.tex`. On line 348, replace `\bibliographystyle{bibliography}` by `\pdfoutput=1`. The `\bibliographystyle{bibliography}` command is not needed because arXiv produces the bibliography from the `paper.bbl` file. The `\pdfoutput=1` is required because the paper is compiled with pdfTeX. Also ensure that the *.bib file is removed or else the compilation recipe will attempt to create a new bibliography and produce a fresh, empty *.bbl file.
+
 2. Collect the required files into a folder. There should be four files: the source file `paper.tex`, the bibliography file `paper.bbl`, the style file `paper.sty`, and the figure file `figures.pdf`. 
 3. Zip the folder and upload the zipped folder to arXiv.
 

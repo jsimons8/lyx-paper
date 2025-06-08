@@ -341,8 +341,11 @@ We make sure that citations work like so \citet{MS15} and one more:
 compiles under `pdflatex.' If one wishes to use the original `bibliography.bst,'
 plain LaTeX compilation should be used.
 
-%\pdfoutput=1
-\bibliographystyle{chicago}
+Note that the *.bib file must be remove once the *.bbl file has become
+available.
+
+\pdfoutput=1
+%\bibliographystyle{chicago}
 \bibliography{bibliography}
 
 

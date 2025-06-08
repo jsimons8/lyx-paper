@@ -1,13 +1,11 @@
-%% LyX 2.4.3 created this file.  For more info, see https://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
-\documentclass[american,letterpaper,11pt,leqno]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage[authoryear]{natbib}
-
-\makeatletter
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
 % ---- Select text fonts ----
 
 % Make PDF searchable and copyable
@@ -293,64 +291,322 @@ Available at \url{#2}}}}
 % ---- Enable hyperlinks  ----
 
 \usepackage[pdftex,hidelinks,hypertexnames=false,pdfpagemode=UseNone,pdfdisplaydoctitle=true]{hyperref}
+\end_preamble
+\options letterpaper,11pt,leqno
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
 
-\ifdefined\showcaptionsetup
- % Caption package is used. Advise subfig not to load it again.
- \PassOptionsToPackage{caption=false}{subfig}
-\fi
-\usepackage{subfig}
-\makeatother
+\begin_body
 
-\usepackage{babel}
-\begin{document}
-\title{My paper}
-\author{First Author, Second Author\thanks{First Author: First University. Second Author: Second University.
-We thank colleagues for helpful comments and discussions. This work
-was supported by a grant {[}grant number{]}; another grant {[}grant
-number{]}; and a foundation.\}}}
-\date{June 08, 2025}
+\begin_layout Title
+My paper
+\end_layout
 
-\maketitle
+\begin_layout Author
+First Author,
+ Second Author
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+First Author:
+ First University.
+ Second Author:
+ Second University.
+ We thank colleagues for helpful comments and discussions.
+ This work was supported by a grant [grant number];
+ another grant [grant number];
+ and a foundation.}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+\begin_inset Info
+type  "moddate"
+arg   "loclong"
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 % Enter permanent URL (can be commented out):
-\available{https://github.com/jsimons8/lyx-paper}
-\begin{abstract}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+available{https://github.com/jsimons8/lyx-paper}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
 My abstract.
-\end{abstract}
+\end_layout
 
-\section{My Section}
+\begin_layout Section
+My Section
+\end_layout
 
-\begin{figure}
+\begin_layout Standard
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status collapsed
 
-\subfloat[Left panel]{\includegraphics[scale=0.2,page=1]{figures}
+\begin_layout Plain Layout
 
-}\hfill{}\subfloat[Right panel]{\includegraphics[scale=0.2,page=2]{figures}
+\end_layout
 
-}\caption{Panel figure.}
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
 
-\end{figure}
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../latex-paper-lyx/figures.pdf
+	lyxscale 20
+	scale 20
+	special page=1
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Left panel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../latex-paper-lyx/figures.pdf
+	lyxscale 20
+	scale 20
+	special page=2
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Right panel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Panel figure.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 An equation with label
+\end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
 \begin{equation}
 y=mx+b,\label{eq:line}
 \end{equation}
+
+\end_inset
+
 which we cross-reference in the document `appendix.lyx.'
+\end_layout
 
-We make sure that citations work like so \citet{MS15} and one more:
-\citet{M14}. The bibliography style is `chicago' so that the document
-compiles under `pdflatex.' If one wishes to use the original `bibliography.bst,'
-plain LaTeX compilation should be used.
+\begin_layout Standard
+We make sure that citations work like so 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "MS15"
+literal "false"
 
-%\pdfoutput=1
-\bibliographystyle{chicago}
-\bibliography{bibliography}
+\end_inset
+
+ and one more:
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "M14"
+literal "false"
+
+\end_inset
+
+.
+ The bibliography style is `chicago' so that the document compiles under `pdflatex.' If one wishes to use the original `bibliography.bst,' plain LaTeX compilation should be used.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "../latex-paper-lyx/bibliography"
+options "chicago"
+encoding "default"
+
+\end_inset
 
 
-\appendix
+\end_layout
 
-\section{First appendix section}
+\begin_layout Section
+\start_of_appendix
+First appendix section
+\end_layout
 
-This is an in-document appendix. Some journals offer authors to upload
-a separate appendix which is only published online. For a document
-that produces a separate appendix, please see `appendix.lyx.`
-\end{document}
+\begin_layout Standard
+This is an in-document appendix.
+ Some journals offer authors to upload a separate appendix which is only published online.
+ For a document that produces a separate appendix,
+ please see `appendix.lyx.`
+\end_layout
+
+\end_body
+\end_document

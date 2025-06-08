@@ -1,10 +1,12 @@
-# Minimalist LaTeX Template for Academic Papers
+# Minimalist LyX Template for Academic Papers
 
-This repository contains a [LaTeX](https://github.com/latex3/latex2e) template to create an academic paper. The template follows typographical best practices and has a minimalist design. The template is particularly well suited for research papers. It is designed so papers are comfortable to read and easy to scan, both in print and on screen. 
+This repository contains a [LyX](https://www.lyx.org) template using [LaTeX](https://github.com/latex3/latex2e) to create an academic paper. The template follows the LaTeX original by Pascal Michaillat available [here](https://github.com/pmichaillat/latex-paper).
+
+It follows typographical best practices and has a minimalist design. The template is particularly well-suited for research papers. It is designed so papers are comfortable to read and easy to scan, both in print and on screen. 
 
 ## Documentation
 
-The template is documented at https://pascalmichaillat.org/a/.
+The original LaTeX template is documented at https://pascalmichaillat.org/a/. Specific to the LyX version is the fact that the file `paper.aux` is necessary for `appendix.lyx` to pick up cross-references from `paper.lyx`. The aux file can be generated easily by running generic LaTeX (not pdfLaTeX) on `paper.tex`.
 
 ## Illustration
 
@@ -14,19 +16,26 @@ The template is documented at https://pascalmichaillat.org/a/.
 ## Usage
 
 + Clone the repository to your local machine.
-+ Start editing the LaTeX file `paper.tex` to replace the boilerplate content with the content of your paper. 
++ Start editing the LyX file `paper.lyx` to replace the boilerplate content with the content of your paper. 
 + Replace the figures in the PDF file `figures.pdf` with the figures to be included in your paper (one figure per page).
 + Replace the references in the BibTeX file `bibliography.bib` with the references to be included in your paper.
-+ Compile `paper.tex` with pdfTeX. This will generate a PDF file of your paper named `paper.pdf`.
++ Compile the document with LyX's default engine. This will generate a PDF file of your paper named `paper.pdf`.
 + The LaTeX style file `paper.sty` formats the paper. It must be included in the same folder as `paper.tex`. It can be modified to alter the paper's format.
-+ The BibTeX style file `bibliography.bst` formats the bibliography. It must be included in the same folder as `paper.tex`. It can be modified to alter the bibliography's format. The style file is based on `econ.bst`, which was created by Shiro Takeda and is [available on GitHub](https://github.com/ShiroTakeda/econ-bst).
-+ The file `paper.pdf` is not required to use the template. It only illustrates the output of the template and will be overwritten when `paper.tex` is compiled.
++ The BibTeX style file `bibliography.bst` formats the bibliography. As of this first commit, the pdflatex engine that LyX uses produces the following error: 
+
+`You can't pop an empty literal stack for entry M14...`
+
+To avoid this error, the LyX template simply uses the style `chicago`, which produces similar results. 
+
+It can be included in the same folder as `paper.lyx` or added to some of LyX's internal folders. It can be modified to alter the bibliography's format. The style file is based on `econ.bst`, which was created by Shiro Takeda and is [available on GitHub](https://github.com/ShiroTakeda/econ-bst).
+
++ The file `paper.pdf` is not required to use the template. It only illustrates the output of the template and will be overwritten when `paper.lyx` is compiled.
 
 ## Online appendix
 
 The repository also includes files to produce an online appendix—in case the paper's appendix must be carved out into a separate, online appendix upon publication. An online appendix can be produced as follows:
 
-+ Start editing the LaTeX file `appendix.tex` to replace the boilerplate content with the content of your online appendix. 
++ Start editing the LyX file `appendix.lyx` to replace the boilerplate content with the content of your online appendix. 
 + The equation and section labels from `paper.tex` can be used in `appendix.tex`. [This requires the following](https://www.ctan.org/pkg/xr):
 	+ The file `appendix.tex` is in the same folder as `paper.tex`.
 	+ The file `paper.tex` is compiled first.
@@ -37,9 +46,11 @@ The repository also includes files to produce an online appendix—in case the p
 
 ## Submission to arXiv
 
-The template is perfectly compatible with [arXiv](https://arxiv.org/). After being compiled with pdfTeX, a paper based on the template can be submitted to arXiv in three steps:
+The template is perfectly compatible with [arXiv](https://arxiv.org/). After being compiled with pdfTeX, a paper based on the template can be submitted to arXiv in four steps:
 
-1. Adjust the preamble of `paper.tex`. On line 3, replace `\bibliographystyle{bibliography}` by `\pdfoutput=1`. The `\bibliographystyle{bibliography}` command is not needed because arXiv produces the bibliography from the `paper.bbl` file. The `\pdfoutput=1` is required because the paper is compiled with pdfTeX.
+1. Export the LyX file as `pdflatex` by clicking File > Export > LaTeX (pdflatex) and move the exported `paper.tex` into the `arxiv` folder.
+
+2. Adjust the preamble of `paper.tex`. On line 3, replace `\bibliographystyle{bibliography}` by `\pdfoutput=1`. The `\bibliographystyle{bibliography}` command is not needed because arXiv produces the bibliography from the `paper.bbl` file. The `\pdfoutput=1` is required because the paper is compiled with pdfTeX.
 2. Collect the required files into a folder. There should be four files: the source file `paper.tex`, the bibliography file `paper.bbl`, the style file `paper.sty`, and the figure file `figures.pdf`. 
 3. Zip the folder and upload the zipped folder to arXiv.
 
@@ -47,14 +58,16 @@ The `arXiv` folder illustrates how the template should be prepared for submissio
 
 ## Software
 
-+ The template was developed with TeX Live 2023 on macOS. 
-+ Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/latex-math/issues) to help improve compatibility.
++ The template was developed with LyX 2.4.3 on macOS. 
++ Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues to me directly](mailto:jrs89@cam.ac.uk) to help improve compatibility.
 
 ## License
 
 This repository is licensed under the [MIT License](LICENSE.md).
 
 ## Real-world implementations
+
+Please note that these were generated using the original from Pascal Michaillat.
 
 + [Has the Recession Started?](https://arxiv.org/pdf/2408.05856v2.pdf) ([source code](https://arxiv.org/src/2408.05856v2))
 + [Beveridgean Phillips Curve](https://arxiv.org/pdf/2401.12475v2.pdf) ([source code](https://arxiv.org/src/2401.12475v2))
@@ -63,5 +76,8 @@ This repository is licensed under the [MIT License](LICENSE.md).
 
 ## Related resources
 
-+ [latex-presentation](https://github.com/pmichaillat/latex-presentation) - This LaTeX template produces academic presentations following the same typographic principles and with a similar appearance as this paper template. 
+I may release LyX versions of these templates in the future: 
+
++ [latex-presentation](https://github.com/pmichaillat/latex-presentation) - This LaTeX template produces academic presentations following the same typographic principles and with a similar appearance as this paper template.
+
 + [latex-math](https://github.com/pmichaillat/latex-math) - These LaTeX commands simplify writing mathematical expressions. They can be used in combination with this paper template.

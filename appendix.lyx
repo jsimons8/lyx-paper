@@ -539,7 +539,7 @@ literal "false"
 
 \end_inset
 
- and one include one more:
+ and include one more:
  
 \begin_inset CommandInset citation
 LatexCommand citet

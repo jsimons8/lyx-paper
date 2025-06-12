@@ -580,7 +580,7 @@ Another appendix section
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "bibliography"
-options "chicago"
+options "paper"
 encoding "default"
 
 \end_inset
